@@ -24,7 +24,7 @@ func main() {
 		fmt.Println(*mail)
 
 	} else {
-		fmt.Println("not allowed kid are gone")
+		fmt.Println("not allowed kid are arrgsrf gone")
 
 	}
 
