@@ -31,7 +31,7 @@ func (c *Course) IsEmpty() bool {
 }
 
 func main() {
-	fmt.Println("api project")
+	fmt.Println(" kjhfr general api project")
 	r := mux.NewRouter()
 	courses = append(courses, Course{name: "golang", CourseId: "1",
 	 price: 20, writer: &writer{fullname: "vamsi",website: "vamsi.com"}})
