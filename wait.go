@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"sync"
 )
+var signals = []string{"test"}
 var wg sync.WaitGroup
 
 func main() {
@@ -28,6 +29,7 @@ func Statuscode(endpoint string){
 	if err != nil{
 		fmt.Println("oops is endpoint")
 	}else {
+		signals = append(signals,endpoint)
 		fmt.Printf( "%d is status for %s",res.StatusCode, endpoint)
 
 	}
