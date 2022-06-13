@@ -26,7 +26,7 @@ type writer struct {
 var courses []Course
 
 func (c *Course) IsEmpty() bool {
-	//return c.name =="" && c.course == ""
+	//return c.name =="" && c.course =
 	return c.name == ""
 }
 
@@ -34,14 +34,14 @@ func main() {
 	fmt.Println(" kjhfr general api project")
 	r := mux.NewRouter()
 	courses = append(courses, Course{name: "golang", CourseId: "1",
-	 price: 20, writer: &writer{fullname: "vamsi",website: "vamsi.com"}})
-	 courses = append(courses, Course{name: "devops", CourseId: "2",
-	 price: 20, writer: &writer{fullname: "varun",website: "varun.com"}})
-	 r.HandleFunc("/",servehome).Methods("GET")
-	 r.HandleFunc("/courses",getallcourses).Methods("GET")
-	 r.HandleFunc("/courses/{Id}",getonecourse).Methods("GET")
-	 
-	 log.Fatal(http.ListenAndServe(":9000", r))
+		price: 20, writer: &writer{fullname: "vamsi", website: "vamsi.com"}})
+	courses = append(courses, Course{name: "devops", CourseId: "2",
+		price: 20, writer: &writer{fullname: "varun", website: "varun.com"}})
+	r.HandleFunc("/", servehome).Methods("GET")
+	r.HandleFunc("/courses", getallcourses).Methods("GET")
+	r.HandleFunc("/courses/{Id}", getonecourse).Methods("GET")
+
+	log.Fatal(http.ListenAndServe(":9000", r))
 
 }
 
